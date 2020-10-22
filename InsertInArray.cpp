@@ -1,6 +1,8 @@
 // Insert a value in sorted array
 
 void insertInSortedArray(int a[], int &n, int value){
+    // If value being inserted is greater than the last value, insert it at the end
+    
     if (value > a[n-1])
     {
         a[n] = value;
@@ -9,25 +11,26 @@ void insertInSortedArray(int a[], int &n, int value){
     }
 
     int index;
-    bool positionFound = false;
 
+    // Search the position of value being inserted in the array
+    
     for (int i=0; i<n; i++){
         if (a[i] > value){
-            positionFound = true;
             index = i;
             break;
         }
     }
 
-    if (positionFound){
-        // Right Shift
-
-        for (int i=n; i>index; i--){
-            a[i] = a[i-1];
-        }
-        a[index] = value;
-        n++;
+    // Right Shift
+    for (int i=n; i>index; i--){
+        a[i] = a[i-1];
     }
+    
+    // Updation of value in the array at proper index
+    a[index] = value;
+    
+    // Increase in the number of total elements in the array
+    n++;
 }
 
 void display(int a[], int n){
