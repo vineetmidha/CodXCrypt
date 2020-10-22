@@ -62,3 +62,26 @@ int main()
    return 0;
 }
 
+/*
+
+Enter total elements: 5
+Enter array elements: 10
+30
+40
+50
+60
+10 30 40 50 60
+Enter value to insert: 20
+10 20 30 40 50 60
+
+Enter total elements: 5
+Enter array elements: 10
+20
+30
+40
+50
+10 20 30 40 50
+Enter value to insert: 70
+10 20 30 40 50 70
+
+*/
